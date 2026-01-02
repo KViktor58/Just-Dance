@@ -1,0 +1,723 @@
+body {
+    background-color: #F8F4EC;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: var(--header-height);
+}
+
+.top-band {
+    grid-column: 2/3;
+    background: var(--bg);
+}
+
+.mid-band {
+    grid-column: 2/3;
+    background: #E83C91;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 48px;
+}
+
+.bot-band {
+    grid-column: 2/3;
+    background: var(--bg);
+}
+
+.mid-band a {
+    margin-left: 40px;
+    color: #F8F4EC;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.mid-band a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Images */
+.miniLogo {
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+
+.heroImg {
+    background-image: 
+        linear-gradient(180deg,
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.9)),
+        url("../img/heroImg.png");
+
+    width: 100%;
+    height: 745px; 
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.heroText {
+    color: #F8F4EC;
+    max-width: 900px;
+    font-size: 30px;
+    padding: 80px;
+}
+
+.logo {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
+}
+
+.circle:hover {
+    transform: translateY(-3px);
+    transition: 0.2s;
+    box-shadow: 12px 12px 25px rgba(0,0,0,0.3);
+}
+
+.logo img {
+    max-height: 90%;
+    width: auto;
+    display: block;
+}
+
+.adomanyImg {
+    width: 500px;
+    height: 500px;
+}
+
+
+
+/* Text */
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContent p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 6px auto;
+    text-align: justify;
+}
+
+.pinkHighlight {
+    color: #E83C91;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    color: #E83C91;
+    padding: 10px;
+}
+
+.small {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.large {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+
+.mainContent2 {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.mainContent2 h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.mainContent2 p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 16px 0;
+    text-align: justify;
+}
+
+
+.about-hero {
+    height: 300px;
+    background-image:
+        linear-gradient(180deg,
+            rgba(67, 51, 76, 0.3),
+            rgba(67, 51, 76, 0.85)
+        ),
+        url("../img/heroImg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero__overlay {
+    text-align: center;
+    color: #F8F4EC;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.about-hero__overlay h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.about-hero__overlay p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+
+/*Footer*/
+.footer {
+    width: 100%;
+    background-color: #43334C;
+    color: #F8F4EC;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 24px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.footer div{
+    display:flex;
+    flex-direction:column;
+    gap:10px;}
+
+.footer h5{
+    margin:0 0 12px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:#e8ecf7;}
+
+.footer ul{ list-style:none; margin:0; padding:0; }
+.footer li{ margin:0 0 8px; }
+.footer a{ color:#FF8FB7; text-decoration:none; }
+.footer a:hover{ color:#E83C91; }
+
+
+
+/* ===== Hero - reusable ===== */
+.page-hero {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-hero__overlay {
+    text-align: center;
+    color: #F8F4EC;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.page-hero__overlay h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.page-hero__overlay p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Időpontok oldal heroja */
+.page-hero--schedule {
+    background-image:
+        linear-gradient(180deg,
+            rgba(67, 51, 76, 0.3),
+            rgba(67, 51, 76, 0.85)
+        ),
+        url("../img/heroImg.png");
+}
+
+/* ===== Időpontok main rész ===== */
+.schedule-main {
+    max-width: 1000px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+}
+
+.schedule-section {
+    margin-bottom: 40px;
+}
+
+.schedule-title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 24px;
+    color: #43334C;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Kétszéles grid mobilon egymás alá essen */
+@media (max-width: 768px) {
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.schedule-card {
+    background-color: #F8F4EC;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(232, 60, 145, 0.12);
+}
+
+.schedule-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #E83C91;
+}
+
+.schedule-card p,
+.schedule-card li {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.schedule-card ul {
+    padding-left: 18px;
+    margin: 8px 0 10px 0;
+}
+
+.schedule-note {
+    font-size: 14px;
+    color: #43334C;
+    opacity: 0.9;
+    margin-top: 8px;
+}
+
+.schedule-location {
+    font-weight: 500;
+}
+
+/* Kiemelt kártya próbaedzésekhez */
+.schedule-card--highlight {
+    background-color: #ffb2cd;
+    color: #43334C;
+    border: none;
+    box-shadow: 0 10px 22px rgba(232, 60, 145, 0.25);
+}
+
+.schedule-card--highlight strong {
+    color: #43334C;
+}
+
+/* CTA a lap alján */
+.schedule-cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.schedule-cta__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.schedule-cta__contact {
+    font-size: 18px;
+}
+
+
+
+
+/* ===== HERO EVENTS ===== */
+.page-hero--events {
+    background-image:
+        linear-gradient(180deg,
+            rgba(67, 51, 76, 0.3),
+            rgba(67, 51, 76, 0.85)
+        ),
+        url("../img/heroImg.png");
+}
+
+/* ===== EVENTS GRID ===== */
+.events-main {
+    max-width: 1100px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== EVENT CARD ===== */
+.event-card {
+    background-color: #F8F4EC;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(232, 60, 145, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(232, 60, 145, 0.3);
+}
+
+.event-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.event-content {
+    padding: 18px;
+}
+
+.event-content h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #E83C91;
+}
+
+.event-date {
+    font-size: 14px;
+    color: #43334C;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+
+
+
+/* ===== RESULTS MAIN ===== */
+.results-main {
+    max-width: 1000px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+}
+
+/* ===== RESULT CARD ===== */
+.result-card {
+    background: #F8F4EC;
+    padding: 24px;
+    border-radius: 18px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    border: 1px solid rgba(232,60,145,0.15);
+}
+
+.result-card h2 {
+    text-align: center;
+    margin-bottom: 14px;
+    color: #E83C91;
+}
+
+.result-card p {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0 18px 0;
+}
+
+.result-card h3 {
+    text-align: center;
+    margin: 10px 0;
+    color: #43334C;
+}
+
+/* ===== LIST ===== */
+.result-list {
+    max-width: 320px;
+    margin: 10px auto 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.result-list li {
+    position: relative;
+    padding-left: 16px;
+    text-align: left;
+    margin: 2px 0;
+}
+
+.result-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #E83C91;
+    font-weight: 700;
+}
+
+
+
+/* ===== GALLERY ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox img {
+    display: block;
+}
+
+.lightbox:target img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    border-radius: 10px;
+}
+
+.lightbox:target::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 9998;
+}
+
+.lightbox:target {
+    display: block;
+}
+
+
+/* ===== TÁMOGATÁS OLDAL ===== */
+
+.support-main {
+    max-width: 800px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+}
+
+.support-card {
+    background-color: #F8F4EC;
+    border-radius: 20px;
+    padding: 32px 24px 40px 24px;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    border: 1px solid rgba(232,60,145,0.18);
+}
+
+.support-card h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: #43334C;
+}
+
+.support-lead {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+/* Kiemelt keretes rész a névnek + adószámnak */
+.support-box {
+    background-color: #ffb2cd;
+    padding: 18px 16px;
+    border-radius: 16px;
+    margin: 0 auto 24px auto;
+    max-width: 520px;
+    color: #43334C;
+    box-shadow: 0 10px 22px rgba(232, 60, 145, 0.25);
+}
+
+.support-name {
+    font-weight: 600;
+    margin: 4px 0 12px 0;
+}
+
+.support-tax {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.support-thanks {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.adomanyImg {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.extraText {
+    font-size: 18px;
+    font-weight: 500;
+    color: #43334C;
+    text-align: center;
+    margin: 30px 0;
+}
+
+
+
+
+/* ===== ELÉRHETŐSÉGEK OLDAL ===== */
+
+.contact-main {
+    max-width: 900px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+}
+
+.contact-wrapper {
+    background-color: #F8F4EC;
+    border-radius: 20px;
+    padding: 32px 24px 36px 24px;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(232, 60, 145, 0.18);
+}
+
+.contact-wrapper h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+    color: #43334C;
+}
+
+.contact-intro {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 6px 0;
+}
+
+.contact-box {
+    margin: 26px auto 18px auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 18px 22px;
+    max-width: 420px;
+    border: 1px solid rgba(232, 60, 145, 0.25);
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 6px 0;
+}
+
+.contact-icon {
+    font-size: 26px;
+}
+
+.contact-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #43334C;
+    opacity: 0.8;
+}
+
+.contact-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #E83C91;
+}
+
+.contact-note {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 16px;
+    color: #43334C;
+    opacity: 0.9;
+}
