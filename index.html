@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="hu">
     <head>
-        <meta charset="utf-8">
-               
+        <meta charset="utf-8">          
         <title>Főoldal - Just Dance</title>
         <link rel="icon" type="image/png" href="img/logo.jpg">
         <link rel="stylesheet" href="css/style.css">
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
     </head>
 
     <body> 
@@ -49,6 +49,16 @@
             </div>
         </div>
 
+        <!-- 3D Model -->
+        <model-viewer src="trophy.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" shadow-intensity="2"  style="width: 100%; height: 400px; background-color: #F8F4EC; border-radius: 20px;">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+
+        </model-viewer>
 
 
         <!-- Footer -->
